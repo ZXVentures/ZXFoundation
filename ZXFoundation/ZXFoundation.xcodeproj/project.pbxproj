@@ -17,6 +17,7 @@
 		08A1EDEA1D74C2890061F43D /* NSURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDE1D74BC440061F43D /* NSURLResponse.swift */; };
 		08A1EDEB1D74C28D0061F43D /* NSHTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDC1D74BB7B0061F43D /* NSHTTPURLResponse.swift */; };
 		08A1EDEC1D74C2910061F43D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDA1D74BB2F0061F43D /* HTTPMethod.swift */; };
+		08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EE1B1D74D03B0061F43D /* Dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		08A1EDE01D74BC760061F43D /* HTTPContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPContentType.swift; path = Networking/HTTPContentType.swift; sourceTree = "<group>"; };
 		08A1EDE21D74BCA60061F43D /* HTTPHeaderField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPHeaderField.swift; path = Networking/HTTPHeaderField.swift; sourceTree = "<group>"; };
 		08A1EDE51D74BD620061F43D /* ZXFoundationTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZXFoundationTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		08A1EE1B1D74D03B0061F43D /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Foundation/Dictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		08A1EDC11D74BA0A0061F43D /* ZXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				08A1EE1A1D74D0240061F43D /* Foundation */,
 				08A1EDD91D74BAEC0061F43D /* Networking */,
 				08A1EDC21D74BA0A0061F43D /* ZXFoundation.h */,
 				08A1EDC41D74BA0A0061F43D /* Info.plist */,
@@ -109,6 +112,14 @@
 				08A1EDE21D74BCA60061F43D /* HTTPHeaderField.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		08A1EE1A1D74D0240061F43D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				08A1EE1B1D74D03B0061F43D /* Dictionary.swift */,
+			);
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 				08A1EDE11D74BC760061F43D /* HTTPContentType.swift in Sources */,
 				08A1EDDD1D74BB7B0061F43D /* NSHTTPURLResponse.swift in Sources */,
 				08A1EDDF1D74BC440061F43D /* NSURLResponse.swift in Sources */,
+				08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +430,7 @@
 				08A1EDD51D74BA0A0061F43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08A1EDD61D74BA0A0061F43D /* Build configuration list for PBXNativeTarget "ZXFoundationTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				08A1EDD81D74BA0A0061F43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
