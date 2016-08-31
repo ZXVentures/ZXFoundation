@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08920B731D766847007F5306 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08920B721D766847007F5306 /* HTTPStatus.swift */; };
 		08A1EDC31D74BA0A0061F43D /* ZXFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 08A1EDC21D74BA0A0061F43D /* ZXFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08A1EDCA1D74BA0A0061F43D /* ZXFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A1EDBF1D74BA0A0061F43D /* ZXFoundation.framework */; };
 		08A1EDDB1D74BB2F0061F43D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDA1D74BB2F0061F43D /* HTTPMethod.swift */; };
-		08A1EDDD1D74BB7B0061F43D /* NSHTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDC1D74BB7B0061F43D /* NSHTTPURLResponse.swift */; };
 		08A1EDDF1D74BC440061F43D /* NSURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDE1D74BC440061F43D /* NSURLResponse.swift */; };
 		08A1EDE11D74BC760061F43D /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDE01D74BC760061F43D /* HTTPContentType.swift */; };
 		08A1EDE31D74BCA60061F43D /* HTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDE21D74BCA60061F43D /* HTTPHeaderField.swift */; };
 		08A1EDEA1D74C2890061F43D /* NSURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDE1D74BC440061F43D /* NSURLResponse.swift */; };
-		08A1EDEB1D74C28D0061F43D /* NSHTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDC1D74BB7B0061F43D /* NSHTTPURLResponse.swift */; };
 		08A1EDEC1D74C2910061F43D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDA1D74BB2F0061F43D /* HTTPMethod.swift */; };
 		08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EE1B1D74D03B0061F43D /* Dictionary.swift */; };
 /* End PBXBuildFile section */
@@ -31,13 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08920B721D766847007F5306 /* HTTPStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPStatus.swift; path = Networking/HTTPStatus.swift; sourceTree = "<group>"; };
 		08A1EDBF1D74BA0A0061F43D /* ZXFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZXFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A1EDC21D74BA0A0061F43D /* ZXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXFoundation.h; sourceTree = "<group>"; };
 		08A1EDC41D74BA0A0061F43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A1EDC91D74BA0A0061F43D /* ZXFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A1EDD01D74BA0A0061F43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A1EDDA1D74BB2F0061F43D /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Networking/HTTPMethod.swift; sourceTree = "<group>"; };
-		08A1EDDC1D74BB7B0061F43D /* NSHTTPURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSHTTPURLResponse.swift; path = Networking/NSHTTPURLResponse.swift; sourceTree = "<group>"; };
 		08A1EDDE1D74BC440061F43D /* NSURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSURLResponse.swift; path = Networking/NSURLResponse.swift; sourceTree = "<group>"; };
 		08A1EDE01D74BC760061F43D /* HTTPContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPContentType.swift; path = Networking/HTTPContentType.swift; sourceTree = "<group>"; };
 		08A1EDE21D74BCA60061F43D /* HTTPHeaderField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPHeaderField.swift; path = Networking/HTTPHeaderField.swift; sourceTree = "<group>"; };
@@ -106,10 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				08A1EDDA1D74BB2F0061F43D /* HTTPMethod.swift */,
-				08A1EDDC1D74BB7B0061F43D /* NSHTTPURLResponse.swift */,
 				08A1EDDE1D74BC440061F43D /* NSURLResponse.swift */,
 				08A1EDE01D74BC760061F43D /* HTTPContentType.swift */,
 				08A1EDE21D74BCA60061F43D /* HTTPHeaderField.swift */,
+				08920B721D766847007F5306 /* HTTPStatus.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -233,9 +232,9 @@
 				08A1EDDB1D74BB2F0061F43D /* HTTPMethod.swift in Sources */,
 				08A1EDE31D74BCA60061F43D /* HTTPHeaderField.swift in Sources */,
 				08A1EDE11D74BC760061F43D /* HTTPContentType.swift in Sources */,
-				08A1EDDD1D74BB7B0061F43D /* NSHTTPURLResponse.swift in Sources */,
 				08A1EDDF1D74BC440061F43D /* NSURLResponse.swift in Sources */,
 				08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */,
+				08920B731D766847007F5306 /* HTTPStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A1EDEB1D74C28D0061F43D /* NSHTTPURLResponse.swift in Sources */,
 				08A1EDEC1D74C2910061F43D /* HTTPMethod.swift in Sources */,
 				08A1EDEA1D74C2890061F43D /* NSURLResponse.swift in Sources */,
 			);

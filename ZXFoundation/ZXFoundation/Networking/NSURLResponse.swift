@@ -11,7 +11,7 @@ import Foundation
 extension NSURLResponse {
 
     /// The HTTP status code of the NSURLResponse if applicable.
-    public var httpStatus: NSHTTPURLResponse.HTTPStatus? {
-        return NSHTTPURLResponse.HTTPStatus((self as? NSHTTPURLResponse)?.statusCode)
+    public var httpStatus: HTTPStatus? {
+        return HTTPStatus((self as? NSHTTPURLResponse)?.statusCode)
     }
 }
