@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     /// String with no extra " " spaces.
-    internal var noSpaces: String {
+    public var noSpaces: String {
         return self.stringByReplacingOccurrencesOfString(" ", withString: "")
     }
 }
