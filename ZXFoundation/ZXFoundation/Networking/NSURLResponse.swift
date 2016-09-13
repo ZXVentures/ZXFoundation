@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension NSURLResponse {
+extension URLResponse {
 
     /// The HTTP status code of the NSURLResponse if applicable.
     public var httpStatus: HTTPStatus? {
-        return HTTPStatus((self as? NSHTTPURLResponse)?.statusCode)
+        return HTTPStatus((self as? HTTPURLResponse)?.statusCode)
     }
 }

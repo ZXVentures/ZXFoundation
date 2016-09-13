@@ -16,7 +16,7 @@ extension Dictionary {
      - parameter transform: The transformation.
      - returns: New dictionary after transform.
      */
-    public func map<K: Hashable, V>(@noescape transform: (Key, Value) -> (K, V)) -> [K: V] {
+    public func map<K: Hashable, V>(_ transform: (Key, Value) -> (K, V)) -> [K: V] {
         
         var result: [K: V] = [:]
         

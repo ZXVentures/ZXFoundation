@@ -14,8 +14,6 @@
 		08A1EDDF1D74BC440061F43D /* NSURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDE1D74BC440061F43D /* NSURLResponse.swift */; };
 		08A1EDE11D74BC760061F43D /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDE01D74BC760061F43D /* HTTPContentType.swift */; };
 		08A1EDE31D74BCA60061F43D /* HTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDE21D74BCA60061F43D /* HTTPHeaderField.swift */; };
-		08A1EDEA1D74C2890061F43D /* NSURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDE1D74BC440061F43D /* NSURLResponse.swift */; };
-		08A1EDEC1D74C2910061F43D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDDA1D74BB2F0061F43D /* HTTPMethod.swift */; };
 		08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EE1B1D74D03B0061F43D /* Dictionary.swift */; };
 		08E42D471D81C14D00AD9464 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E42D461D81C14D00AD9464 /* String.swift */; };
 /* End PBXBuildFile section */
@@ -186,9 +184,13 @@
 				TargetAttributes = {
 					08A1EDBE1D74BA0A0061F43D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FJ7Z6LB83U;
+						LastSwiftMigration = 0800;
 					};
 					08A1EDC81D74BA0A0061F43D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FJ7Z6LB83U;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -246,8 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A1EDEC1D74C2910061F43D /* HTTPMethod.swift in Sources */,
-				08A1EDEA1D74C2890061F43D /* NSURLResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +357,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -369,6 +371,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -377,6 +380,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -387,6 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -394,12 +399,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
 				INFOPLIST_FILE = ZXFoundationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZXFoundationTests/ZXFoundationTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -407,11 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
 				INFOPLIST_FILE = ZXFoundationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZXFoundationTests/ZXFoundationTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

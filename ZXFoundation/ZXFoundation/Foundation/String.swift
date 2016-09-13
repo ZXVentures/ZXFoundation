@@ -10,8 +10,22 @@ import Foundation
 
 extension String {
     
-    /// String with no extra " " spaces.
-    public var noSpaces: String {
-        return self.stringByReplacingOccurrencesOfString(" ", withString: "")
+    /// String with quotes. Typically used for JSON.
+    internal var quotes: String {
+        return "\"\(self)\""
+    }
+    
+    /// String with no quotes. Such as defining a type in JSON.
+    internal var noQuotes: String {
+        return self.replace("\"", withString: "")
+    }
+    
+    /// String wrapped in braces. Such as a dictionary.
+    internal var braces: String {
+        return "{\(self)}"
+    }
+    
+    fileprivate func replace(_ string: String, withString new: String) -> String {
+        return self.replacingOccurrences(of: string, with: new, options: NSString.CompareOptions.literal, range: nil)
     }
 }
