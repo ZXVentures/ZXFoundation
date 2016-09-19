@@ -20,7 +20,7 @@ extension CGRect {
      CGPoint(x: (maxX - minX) / 2, y: (maxY - minY) / 2)
      ```
      */
-    var center: CGPoint {
+    public var center: CGPoint {
         return CGPoint(x: (maxX - minX) / 2, y: (maxY - minY) / 2)
     }
 }
