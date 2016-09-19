@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0856E9C41D905A1D009DE617 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856E9C31D905A1D009DE617 /* CGRect.swift */; };
 		08920B731D766847007F5306 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08920B721D766847007F5306 /* HTTPStatus.swift */; };
 		08A1EDC31D74BA0A0061F43D /* ZXFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 08A1EDC21D74BA0A0061F43D /* ZXFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08A1EDCA1D74BA0A0061F43D /* ZXFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A1EDBF1D74BA0A0061F43D /* ZXFoundation.framework */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0856E9C31D905A1D009DE617 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Foundation/CGRect.swift; sourceTree = "<group>"; };
 		08920B721D766847007F5306 /* HTTPStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPStatus.swift; path = Networking/HTTPStatus.swift; sourceTree = "<group>"; };
 		08A1EDBF1D74BA0A0061F43D /* ZXFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZXFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A1EDC21D74BA0A0061F43D /* ZXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXFoundation.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				08A1EE1B1D74D03B0061F43D /* Dictionary.swift */,
 				08E42D461D81C14D00AD9464 /* String.swift */,
+				0856E9C31D905A1D009DE617 /* CGRect.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				08E42D471D81C14D00AD9464 /* String.swift in Sources */,
 				08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */,
 				08920B731D766847007F5306 /* HTTPStatus.swift in Sources */,
+				0856E9C41D905A1D009DE617 /* CGRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
