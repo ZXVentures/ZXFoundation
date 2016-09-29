@@ -17,6 +17,7 @@
 		08A1EDE31D74BCA60061F43D /* HTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EDE21D74BCA60061F43D /* HTTPHeaderField.swift */; };
 		08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1EE1B1D74D03B0061F43D /* Dictionary.swift */; };
 		08E42D471D81C14D00AD9464 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E42D461D81C14D00AD9464 /* String.swift */; };
+		08EE2C0A1D9C92810078873D /* Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EE2C091D9C92810078873D /* Compare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		08A1EDE51D74BD620061F43D /* ZXFoundationTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZXFoundationTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		08A1EE1B1D74D03B0061F43D /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Foundation/Dictionary.swift; sourceTree = "<group>"; };
 		08E42D461D81C14D00AD9464 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Foundation/String.swift; sourceTree = "<group>"; };
+		08EE2C091D9C92810078873D /* Compare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Compare.swift; path = Operators/Compare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		08A1EDC11D74BA0A0061F43D /* ZXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				08EE2C081D9C91B80078873D /* Operators */,
 				08A1EE1A1D74D0240061F43D /* Foundation */,
 				08A1EDD91D74BAEC0061F43D /* Networking */,
 				08A1EDC21D74BA0A0061F43D /* ZXFoundation.h */,
@@ -123,6 +126,14 @@
 				0856E9C31D905A1D009DE617 /* CGRect.swift */,
 			);
 			name = Foundation;
+			sourceTree = "<group>";
+		};
+		08EE2C081D9C91B80078873D /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				08EE2C091D9C92810078873D /* Compare.swift */,
+			);
+			name = Operators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				08A1EDDF1D74BC440061F43D /* NSURLResponse.swift in Sources */,
 				08E42D471D81C14D00AD9464 /* String.swift in Sources */,
 				08A1EE1C1D74D03B0061F43D /* Dictionary.swift in Sources */,
+				08EE2C0A1D9C92810078873D /* Compare.swift in Sources */,
 				08920B731D766847007F5306 /* HTTPStatus.swift in Sources */,
 				0856E9C41D905A1D009DE617 /* CGRect.swift in Sources */,
 			);
