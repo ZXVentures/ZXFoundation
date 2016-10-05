@@ -39,7 +39,12 @@ extension String {
         return strip(self)
     }
     
-    fileprivate func replace(_ string: String, withString new: String) -> String {
-        return self.replacingOccurrences(of: string, with: new, options: NSString.CompareOptions.literal, range: nil)
+    /// String represented with no spaces.
+    public var noSpaces: String {
+        return self.replace(" ", withString: "")
+    }
+    
+    fileprivate func replace(_ string: String, withString new: String, options: NSString.CompareOptions? = nil) -> String {
+        return self.replacingOccurrences(of: string, with: new, options: options ?? NSString.CompareOptions.literal, range: nil)
     }
 }
