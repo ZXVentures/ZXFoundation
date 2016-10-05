@@ -11,18 +11,32 @@ import Foundation
 extension String {
     
     /// String with quotes. Typically used for JSON.
-    internal var quotes: String {
+    public var quotes: String {
         return "\"\(self)\""
     }
     
     /// String with no quotes. Such as defining a type in JSON.
-    internal var noQuotes: String {
+    public var noQuotes: String {
         return self.replace("\"", withString: "")
     }
     
     /// String wrapped in braces. Such as a dictionary.
-    internal var braces: String {
+    public var braces: String {
         return "{\(self)}"
+    }
+    
+    /// String represented without any trailing whitespace.
+    public var noTrailingWhitespace: String {
+        
+        /// Strips whitespace from a string recursively.
+        func strip( _ str: String) -> String {
+            guard str.characters.last == " " else { return str }
+            let str = str.substring(to: str.index(before: str.endIndex))
+            guard str.characters.last != " " else { return strip(str) }
+            return str
+        }
+        
+        return strip(self)
     }
     
     fileprivate func replace(_ string: String, withString new: String) -> String {
