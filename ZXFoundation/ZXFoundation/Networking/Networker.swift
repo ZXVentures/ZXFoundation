@@ -71,7 +71,7 @@ public final class Networker: NSObject {
      
      - seealso: `Endpoint<T>`
      */
-    func load<T>(_ endpoint: Endpoint<T>, completion: @escaping (T?, Error?) -> ()) {
+    public func load<T>(_ endpoint: Endpoint<T>, completion: @escaping (T?, Error?) -> ()) {
         
         // Create a session, initializing the `URLRequest` with the
         // given endpoint.

@@ -48,7 +48,7 @@ public enum HTTPStatus {
 extension HTTPStatus {
     
     /// Representation as `NetworkError`
-    var error: NetworkError {
+    public var error: NetworkError {
         switch self {
         case .clientError: return .client
         case .serverError: return .server
