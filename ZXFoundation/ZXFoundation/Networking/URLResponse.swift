@@ -1,5 +1,5 @@
 //
-//  NSURLResponse.swift
+//  URLResponse.swift
 //  ZXFoundation
 //
 //  Created by Wyatt McBain on 8/29/16.

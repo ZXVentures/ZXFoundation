@@ -23,12 +23,15 @@ public enum HTTPStatus {
     case clientError
     /// Response with server side error.
     case serverError
+    /// No status.
+    case noStatus
     
     /**
      Intialize a status given a status code, even passing in raw status codes.
      */
-    public init?(_ rawValue: Int?) {
-        guard let statusCode = rawValue else { return nil }
+    public init(_ rawValue: Int?) {
+        
+        let statusCode = rawValue ?? 0 // defasult is out of range
         
         // Ranged cases ftw.
         switch statusCode {
@@ -37,7 +40,19 @@ public enum HTTPStatus {
         case 300...399: self = .redirect
         case 400...499: self = .clientError
         case 500...599: self = .serverError
-        default: return nil
+        default:        self = .noStatus
+        }
+    }
+}
+
+extension HTTPStatus {
+    
+    /// Representation as `NetworkError`
+    var error: NetworkError {
+        switch self {
+        case .clientError: return .client
+        case .serverError: return .server
+        default:           return .unknown
         }
     }
 }
