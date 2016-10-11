@@ -13,7 +13,7 @@ import Foundation
  procedures and responses. Implementation is basic to allow
  consumers to extend these errors as they wish.
  */
-enum NetworkError: Error {
+public enum NetworkError: Error {
     
     /// Ill-formed url.
     case url
