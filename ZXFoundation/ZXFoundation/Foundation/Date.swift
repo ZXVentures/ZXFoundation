@@ -17,7 +17,7 @@ extension Date {
      - parameter from: The ISO8601 date string: `yyyy-MM-dd'T'HH:mm:ssZZZZZ`
      - returns:
      */
-    static func iso8601Date(from dateString: String) throws -> Date {
+    public static func iso8601Date(from dateString: String) throws -> Date {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.timeZone = TimeZone.autoupdatingCurrent
