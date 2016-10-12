@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0831637E1DAEFFE300D436EF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831637D1DAEFFE300D436EF /* Date.swift */; };
+		083163801DAF012B00D436EF /* ZXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831637F1DAF012B00D436EF /* ZXError.swift */; };
 		084008161DA82CBA00A5EC10 /* URLSessionDataTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084008151DA82CBA00A5EC10 /* URLSessionDataTaskType.swift */; };
 		084008181DA82D0A00A5EC10 /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084008171DA82D0A00A5EC10 /* URLSessionType.swift */; };
 		0856E9C41D905A1D009DE617 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856E9C31D905A1D009DE617 /* CGRect.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0831637D1DAEFFE300D436EF /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Foundation/Date.swift; sourceTree = "<group>"; };
+		0831637F1DAF012B00D436EF /* ZXError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZXError.swift; path = Errors/ZXError.swift; sourceTree = "<group>"; };
 		084008151DA82CBA00A5EC10 /* URLSessionDataTaskType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionDataTaskType.swift; path = Networking/URLSessionDataTaskType.swift; sourceTree = "<group>"; };
 		084008171DA82D0A00A5EC10 /* URLSessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionType.swift; path = Networking/URLSessionType.swift; sourceTree = "<group>"; };
 		0856E9C31D905A1D009DE617 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Foundation/CGRect.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				08A1EE1B1D74D03B0061F43D /* Dictionary.swift */,
 				08E42D461D81C14D00AD9464 /* String.swift */,
 				0856E9C31D905A1D009DE617 /* CGRect.swift */,
+				0831637D1DAEFFE300D436EF /* Date.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				08BE40A11DAC6B6400AB891C /* NetworkError.swift */,
+				0831637F1DAF012B00D436EF /* ZXError.swift */,
 			);
 			name = Errors;
 			sourceTree = "<group>";
@@ -292,7 +298,9 @@
 			files = (
 				089CC5551DAC33AB002572D1 /* Endpoint.swift in Sources */,
 				089CC5601DAC4716002572D1 /* HTTPHeaderField.swift in Sources */,
+				083163801DAF012B00D436EF /* ZXError.swift in Sources */,
 				089CC5591DAC4664002572D1 /* URLRequest.swift in Sources */,
+				0831637E1DAEFFE300D436EF /* Date.swift in Sources */,
 				08A1EDDF1D74BC440061F43D /* URLResponse.swift in Sources */,
 				08E42D471D81C14D00AD9464 /* String.swift in Sources */,
 				084008161DA82CBA00A5EC10 /* URLSessionDataTaskType.swift in Sources */,
