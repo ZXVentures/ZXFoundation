@@ -18,7 +18,17 @@ extension URLRequest {
      */
     public init<T>(endpoint: Endpoint<T>) {
         self.init(url: endpoint.url)
+        
         httpMethod = endpoint.method.method
+        
+        if let headerFields = endpoint.headerFields {
+            
+            for key in headerFields.keys {
+                guard let value = headerFields[key] else { continue }
+                addValue(value, forHTTPHeaderField: key)
+            }
+        }
+        
         httpBody = {
             switch endpoint.method {
             case .get,

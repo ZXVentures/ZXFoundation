@@ -21,11 +21,11 @@ import Foundation
  ```
  public struct Photo {
  
-    var id: Int16
-    var albumId: Int16
-    var title: String
-    var url: URL
-    var thumbnailUrl: URL
+ var id: Int16
+ var albumId: Int16
+ var title: String
+ var url: URL
+ var thumbnailUrl: URL
  }
  ```
  
@@ -35,24 +35,24 @@ import Foundation
  ```
  extension Photo {
  
-    static func all(with baseUrl: URL) throws -> Endpoint<[Photo]> {
+ static func all(with baseUrl: URL) throws -> Endpoint<[Photo]> {
  
-        guard let url = URL(string: "photos", relativeTo: baseUrl) else { throw NetworkError.url }
+ guard let url = URL(string: "photos", relativeTo: baseUrl) else { throw NetworkError.url }
  
-        return Endpoint(url: url, parse: { json throws in
+ return Endpoint(url: url, parse: { json throws in
  
-            guard let jsonArray = json as? [[String: Any]] else { throw NetworkError.parse }
+ guard let jsonArray = json as? [[String: Any]] else { throw NetworkError.parse }
  
-            do {
+ do {
  
-                var photos = [Photo]()
-                for json in jsonArray {
-                    try photos.append(Photo(with: json))
-                }
-                return photos
-            }
-        })
-    }
+ var photos = [Photo]()
+ for json in jsonArray {
+ try photos.append(Photo(with: json))
+ }
+ return photos
+ }
+ })
+ }
  }
  ```
  
@@ -68,6 +68,9 @@ public struct Endpoint<T> {
     /// The HTTPMethod of the endpoint request.
     public let method: HTTPMethod<Data>
     
+    /// The HTTP header fields `Key: Value` to be sent with the request.
+    public let headerFields: [String: String]?
+    
     /// The parse method of the endpoint which transforms it into
     /// a concrete type.
     public let parse: (Data) throws -> T?
@@ -82,10 +85,12 @@ extension Endpoint {
      
      - parameter url: Full path url for the endpoint.
      - parameter method: The http method the endpoint expects.
+     - parameter headerFields: Optional header fields to be included with
+     the `URLRequest` built from the endpoint.
      - parameter parse: The parsing function that transforms the
      endpoint into a concrete type.
      */
-    public init(url: URL, method: HTTPMethod<Any> = .get, parse: @escaping (Any) throws -> T?) {
+    public init(url: URL, method: HTTPMethod<Any> = .get, headerFields: [String: String]? = nil, parse: @escaping (Any) throws -> T?) {
         
         self.url = url
         
@@ -95,6 +100,8 @@ extension Endpoint {
             // well formed. This will cause a fatal crash if the json is bad.
             try! JSONSerialization.data(withJSONObject: json)
         }
+        
+        self.headerFields = headerFields
         
         self.parse = { data throws in
             let json = try? JSONSerialization.jsonObject(with: data)
