@@ -44,6 +44,12 @@ extension String {
         return self.replace(" ", withString: "")
     }
     
+    /// String escaped for remote queries. 
+    /// - note: Original string will be returned if unable to add percent encoding.
+    public var escaped: String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? self
+    }
+    
     fileprivate func replace(_ string: String, withString new: String, options: NSString.CompareOptions? = nil) -> String {
         return self.replacingOccurrences(of: string, with: new, options: options ?? NSString.CompareOptions.literal, range: nil)
     }
