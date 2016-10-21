@@ -21,11 +21,11 @@ import Foundation
  ```
  public struct Photo {
  
- var id: Int16
- var albumId: Int16
- var title: String
- var url: URL
- var thumbnailUrl: URL
+    var id: Int16
+    var albumId: Int16
+    var title: String
+    var url: URL
+    var thumbnailUrl: URL
  }
  ```
  
@@ -35,24 +35,24 @@ import Foundation
  ```
  extension Photo {
  
- static func all(with baseUrl: URL) throws -> Endpoint<[Photo]> {
+    static func all(with baseUrl: URL) throws -> Endpoint<[Photo]> {
  
- guard let url = URL(string: "photos", relativeTo: baseUrl) else { throw NetworkError.url }
+        guard let url = URL(string: "photos", relativeTo: baseUrl) else { throw NetworkError.url }
  
- return Endpoint(url: url, parse: { json throws in
+        return Endpoint(url: url, parse: { json throws in
  
- guard let jsonArray = json as? [[String: Any]] else { throw NetworkError.parse }
+            guard let jsonArray = json as? [[String: Any]] else { throw NetworkError.parse }
  
- do {
+            do {
  
- var photos = [Photo]()
- for json in jsonArray {
- try photos.append(Photo(with: json))
- }
- return photos
- }
- })
- }
+                var photos = [Photo]()
+                for json in jsonArray {
+                    try photos.append(Photo(with: json))
+                }
+                return photos
+            }
+        })
+    }
  }
  ```
  
