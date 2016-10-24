@@ -71,7 +71,7 @@ public final class Networker: NSObject {
      
      - seealso: `Endpoint<T>`
      */
-    public func load<T>(_ endpoint: Endpoint<T>, completion: @escaping (T?, Error?) -> ()) {
+    public func load<T>(_ endpoint: Endpoint<T>, completion: @escaping (Result<T>) -> ()) {
         
         // Create a session, initializing the `URLRequest` with the
         // given endpoint.
@@ -79,19 +79,12 @@ public final class Networker: NSObject {
             
             let status = HTTPStatus((response as? HTTPURLResponse)?.statusCode)
             
-            // break early if network request is unsuccesful
-            guard status == .success else {
-                completion(nil, status.error)
-                return
-            }
+            // break early if data doesn't exist or request is unsuccessful
+            guard let data = data,
+                status == .success
+                else { completion(.failure(status.error)); return }
             
-            // attempt to parse.
-            do {
-                let item = try data.flatMap(endpoint.parse)
-                completion(item, nil)
-            } catch let error {
-                completion(nil, error)
-            }
+            completion(endpoint.parse(data))
             
         }.resume()
     }

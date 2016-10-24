@@ -73,7 +73,7 @@ public struct Endpoint<T> {
     
     /// The parse method of the endpoint which transforms it into
     /// a concrete type.
-    public let parse: (Data) throws -> T?
+    public let parse: (Data) -> Result<T>
 }
 
 extension Endpoint {
@@ -90,7 +90,7 @@ extension Endpoint {
      - parameter parse: The parsing function that transforms the
      endpoint into a concrete type.
      */
-    public init(url: URL, method: HTTPMethod<Any> = .get, headerFields: [String: String]? = nil, parse: @escaping (Any) throws -> T?) {
+    public init(url: URL, method: HTTPMethod<Any> = .get, headerFields: [String: String]? = nil, parse: @escaping (Any) -> Result<T>) {
         
         self.url = url
         
@@ -103,9 +103,9 @@ extension Endpoint {
         
         self.headerFields = headerFields
         
-        self.parse = { data throws in
-            let json = try? JSONSerialization.jsonObject(with: data)
-            return try json.flatMap(parse)
+        self.parse = {
+            do { return parse(try JSONSerialization.jsonObject(with: $0)) }
+            catch { return .failure(NetworkError.parse) }
         }
     }
 }

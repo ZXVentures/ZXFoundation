@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0817428E1DBAA585003036FE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0817428D1DBAA585003036FE /* Result.swift */; };
 		0831637E1DAEFFE300D436EF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831637D1DAEFFE300D436EF /* Date.swift */; };
 		083163801DAF012B00D436EF /* ZXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831637F1DAF012B00D436EF /* ZXError.swift */; };
 		084008161DA82CBA00A5EC10 /* URLSessionDataTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084008151DA82CBA00A5EC10 /* URLSessionDataTaskType.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0817428D1DBAA585003036FE /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Result/Result.swift; sourceTree = "<group>"; };
 		0831637D1DAEFFE300D436EF /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Foundation/Date.swift; sourceTree = "<group>"; };
 		0831637F1DAF012B00D436EF /* ZXError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZXError.swift; path = Errors/ZXError.swift; sourceTree = "<group>"; };
 		084008151DA82CBA00A5EC10 /* URLSessionDataTaskType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionDataTaskType.swift; path = Networking/URLSessionDataTaskType.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0817428C1DBAA53E003036FE /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				0817428D1DBAA585003036FE /* Result.swift */,
+			);
+			name = Result;
+			sourceTree = "<group>";
+		};
 		089CC5531DAC339A002572D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 				08A1EE1A1D74D0240061F43D /* Foundation */,
 				08A1EDD91D74BAEC0061F43D /* Networking */,
 				08EE2C081D9C91B80078873D /* Operators */,
+				0817428C1DBAA53E003036FE /* Result */,
 				08BE40A01DAC6B0100AB891C /* Errors */,
 				08A1EDC21D74BA0A0061F43D /* ZXFoundation.h */,
 				08A1EDC41D74BA0A0061F43D /* Info.plist */,
@@ -301,6 +312,7 @@
 			files = (
 				084FB4961DB07ACB0070E538 /* DateFormatter.swift in Sources */,
 				089CC5551DAC33AB002572D1 /* Endpoint.swift in Sources */,
+				0817428E1DBAA585003036FE /* Result.swift in Sources */,
 				089CC5601DAC4716002572D1 /* HTTPHeaderField.swift in Sources */,
 				083163801DAF012B00D436EF /* ZXError.swift in Sources */,
 				089CC5591DAC4664002572D1 /* URLRequest.swift in Sources */,
