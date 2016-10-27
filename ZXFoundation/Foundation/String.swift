@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: Replacements
 extension String {
     
     /// String with quotes. Typically used for JSON.
@@ -52,5 +53,20 @@ extension String {
     
     fileprivate func replace(_ string: String, withString new: String, options: NSString.CompareOptions? = nil) -> String {
         return self.replacingOccurrences(of: string, with: new, options: options ?? NSString.CompareOptions.literal, range: nil)
+    }
+}
+
+// MARK: Regualr Expression
+extension String {
+    
+    /**
+     Convenience to test if the String has a match for a given regular expression.
+     
+     - parameter for: The regex to search for.
+     - returns: Was a match found.
+     */
+    public func hasMatch(for regex: String) -> Bool {
+        guard let range = self.range(of: regex, options: .regularExpression) else { return false }
+        return !range.isEmpty
     }
 }
