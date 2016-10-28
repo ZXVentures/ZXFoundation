@@ -16,8 +16,8 @@ import Foundation
  
  For instance let's say we had a variety of json files we would
  like to load for a suite of tests. We'd define a entity conforming
- to this type in order to associate a resource with file names
- and content types.
+ to this type in order to associate a resource with file name, content
+ type and bundle identifier.
  
  ```
  enum MockResponses: MockResource {
@@ -34,6 +34,10 @@ import Foundation
  
     var type: ResourceContentType {
         return .json
+    }
+ 
+    var bundleIdentifier: String {
+        return "com.zx-ventures.frameworks.ShopKit"
     }
  }
  ```
@@ -52,4 +56,7 @@ public protocol MockResource {
     
     /// The file type for the resource.
     var type: ResourceContentType { get }
+    
+    /// The bundle identifier of the target the resource belongs to.
+    var bundleIdentifier: String { get }
 }

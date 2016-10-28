@@ -40,8 +40,8 @@ open class MockURLSession: URLSessionType {
     
     /// Data representation of the resource loaded from the Bundle.
     private var data: Data? {
-        let bundle = Bundle(for: MockURLSession.self)
-        guard let file = bundle.path(forResource: resource.name, ofType: resource.type.rawValue) else { return nil }
+        let bundle = Bundle(identifier: resource.bundleIdentifier)
+        guard let file = bundle?.path(forResource: resource.name, ofType: resource.type.rawValue) else { return nil }
         return (try? Data(contentsOf: URL(fileURLWithPath: file)))
     }
     
@@ -72,7 +72,11 @@ open class MockURLSession: URLSessionType {
     open func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskType {
         
         let response = HTTPURLResponse(url: URL(string: "http://www.zx-ventures-ftw.com")!, statusCode: statusCode.mockStatus, httpVersion: nil, headerFields: headerFields)
-        completionHandler(data, response, nil)
+        
+        // Completion handler returns a notFound NetworkError if resource could not be loaded.
+        if let data = data { completionHandler(data, response, nil) }
+        else { completionHandler(nil, nil, NetworkError.notFound); }
+        
         return dataTask
     }
 }
