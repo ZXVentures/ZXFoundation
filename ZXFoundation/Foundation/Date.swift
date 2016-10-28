@@ -36,8 +36,18 @@ extension Date {
      - returns: The date formatted from the string.
      */
     public static func iso8601Date(from dateString: String) throws -> Date {
+        
         let formatter = DateFormatter.usLocale(with: "yyyy-MM-dd'T'HH:mm:ssZZZZZ")
-        guard let date = formatter.date(from: dateString) else { throw BaseError.unexpectedNil }
+        guard let date = formatter.date(from: dateString) else {
+            
+            // Attempt to fall back before throwing error
+            let formatter = DateFormatter.usLocale(with: "yyyy-MM-dd'T'HH:mm:ss")
+            guard let date = formatter.date(from: dateString) else {
+                
+                throw BaseError.unexpectedNil
+            }
+            return date
+        }
         return date
     }
 }
