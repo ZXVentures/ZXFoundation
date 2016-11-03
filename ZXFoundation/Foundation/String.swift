@@ -69,6 +69,20 @@ extension String {
         guard let range = self.range(of: regex, options: .regularExpression) else { return false }
         return !range.isEmpty
     }
+    
+    /**
+     Convenience to test if the String has a match for one of the given regular
+     expressions in the array provided.
+     
+     - parameter for: The array of regex String to try and match.
+     - returns: Was a match found for one of the provided regex Strings.
+     */
+    public func hasMatch(for regexArray: [String]) -> Bool {
+        for regex in regexArray {
+            if self.hasMatch(for: regex) { return true }
+        }
+        return false
+    }
 }
 
 // MARK: Randomization
