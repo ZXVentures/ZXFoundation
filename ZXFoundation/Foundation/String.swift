@@ -56,7 +56,7 @@ extension String {
     }
 }
 
-// MARK: Regualr Expression
+// MARK: Regular Expression
 extension String {
     
     /**
@@ -68,5 +68,31 @@ extension String {
     public func hasMatch(for regex: String) -> Bool {
         guard let range = self.range(of: regex, options: .regularExpression) else { return false }
         return !range.isEmpty
+    }
+}
+
+// MARK: Randomization
+extension String {
+    
+    /**
+     Creates a random `String` with a provided length.
+     
+     - parameter length: The desired length of the random String.
+     - returns: The random `String` with the appropriate length.
+     */
+    public static func random(length: Int8) -> String {
+        
+        let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let lettersLength = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0..<length {
+            let rand = arc4random_uniform(lettersLength)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
     }
 }
