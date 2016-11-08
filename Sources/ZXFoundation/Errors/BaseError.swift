@@ -1,5 +1,5 @@
 //
-//  ZXError.swift
+//  BaseError.swift
 //  ZXFoundation
 //
 //  Created by Wyatt McBain on 10/12/16.
@@ -14,5 +14,6 @@ import Foundation
  */
 public enum BaseError: Error {
     
+    /// Unexpectantly found a nil value.
     case unexpectedNil
 }

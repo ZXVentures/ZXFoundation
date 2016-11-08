@@ -5,6 +5,8 @@
 //  Created by Wyatt McBain on 10/10/16.
 //  Copyright © 2016 ZX Ventures. All rights reserved.
 //
+// Borrows heavily from: https://talk.objc.io/episodes/S01E01-networking
+//
 
 import Foundation
 
@@ -86,7 +88,7 @@ extension Endpoint {
      - parameter url: Full path url for the endpoint.
      - parameter method: The http method the endpoint expects.
      - parameter headerFields: Optional header fields to be included with
-     the `URLRequest` built from the endpoint.
+     the `URLRequest`.
      - parameter parse: The parsing function that transforms the
      endpoint into a concrete type.
      */

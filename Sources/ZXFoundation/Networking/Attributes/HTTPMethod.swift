@@ -10,7 +10,7 @@ import Foundation
 
 /**
  `HTTPMethod` is a typed representation of a http method for network
- requests. In some cases, the http method may have a associated value.
+ requests. In some cases, the http method may have a associated body value.
  
  ## Cases
  
@@ -40,8 +40,11 @@ extension HTTPMethod {
     }
     
     /**
-     Given a transformative function, associates the Body of data
-     with a particular `HTTPMethod`
+     Transforms the HTTPMethod's associated body value or
+     remaps the HTTPMethod.
+     
+     - parameter f: Transform function.
+     - returns: Maped HTTPMethod.
      */
     public func map<B>(f: (Body) -> B) -> HTTPMethod<B> {
         switch self {

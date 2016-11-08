@@ -40,7 +40,7 @@ public func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 /**
  Compares two optionals of the same type and returns a `Bool`
- indictaing if the left hand side is greater than the right hand 
+ indicating if the left hand side is greater than the right hand 
  side.
  
  * If both the left hand side and right hand side are `.some`

@@ -10,7 +10,7 @@ import Foundation
 
 /**
  Flexible and securable network client for loading network requests that are
- modeled with an `Endpoint<T>`. 
+ modeled with an `Endpoint<T>`.
  
  To test or mock network requests provide the `Networker` with a custom 
  `URLSessionType` which will allow you to return custom responses.
@@ -30,7 +30,7 @@ public final class Networker: NSObject {
     }()
     
     /// Definable session for customization, testing, and mocks.
-    fileprivate var customSession: URLSessionType?
+    fileprivate let customSession: URLSessionType?
     
     /// The `URLSessionType` being utilized for network requests.
     fileprivate var session: URLSessionType {
@@ -38,26 +38,22 @@ public final class Networker: NSObject {
         return session
     }
     
-    /**
-     If present the networker will pin the server's ssl certificate
-     to the data provided, to ensure that the connection to the
-     server is private.
-     */
-    fileprivate var cert: Data?
+    /// The `Credential` to verify the server's authenticity.
+    fileprivate let credential: Credential?
     
     /**
      Default initializer.
      
-     - parameter certificate: The ssl certificate data to pin the server.
+     - parameter credential: The credential to use to verify the server's authenticity.
      **Note:**  Leaving this blank means that all requests will be
      accepeted without verifying the server's identity.
      - parameter session: A custom session. A good way to test network
      requests.
      */
-    public init(certificate cert: Data? = nil, session: URLSessionType? = nil) {
+    public init(credential: Credential? = nil, session: URLSessionType? = nil) {
         
-        self.cert     = cert
-        customSession = session
+        self.credential = credential
+        customSession   = session
     }
     
     /**
@@ -103,40 +99,19 @@ extension Networker: URLSessionDelegate {
                 completionHandler(.cancelAuthenticationChallenge, nil)
                 return
         }
-        
+            
         // Create server credential
-        let credential = URLCredential(trust: serverTrust)
+        let serverCredential = URLCredential(trust: serverTrust)
         
         // Only continue if local cert data is set for comparison
-        guard let cert = cert else {
+        guard let credential = credential else {
             
             // NOTE: If you're relying on this you should probably just stop. Sad!
-            completionHandler(.useCredential, credential)
+            completionHandler(.useCredential, serverCredential)
             return
         }
         
-        // Set policies
-        let policies = NSMutableArray()
-        policies.add(SecPolicyCreateSSL(true, challenge.protectionSpace.host as CFString?))
-        SecTrustSetPolicies(serverTrust, policies)
-        
-        // Evaluate server certificate
-        var result = SecTrustResultType.invalid
-        SecTrustEvaluate(serverTrust, &result)
-        
-        let serverIsTrusted = result == .unspecified || result == .proceed
-        
-        let serverData = SecCertificateCopyData(serverCert) as Data
-        
-        // Evaluate
-        guard serverIsTrusted, serverData.elementsEqual(cert) else {
-            
-            // Server is very very suspicious
-            completionHandler(.cancelAuthenticationChallenge, nil)
-            return
-        }
-        
-        // Succesful pin
-        completionHandler(.useCredential, credential)
+        // Pin the server
+        credential.pin(challenge: challenge, serverTrust: serverTrust, serverCert: serverCert, serverCredential: serverCredential, completion: completionHandler)
     }
 }

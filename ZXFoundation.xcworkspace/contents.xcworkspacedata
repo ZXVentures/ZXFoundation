@@ -4,4 +4,16 @@
    <FileRef
       location = "group:ZXFoundation.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:ZXFoundation.podspec">
+   </FileRef>
 </Workspace>

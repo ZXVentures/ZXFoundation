@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08A1EDBE1D74BA0A0061F43D"
+               BlueprintIdentifier = "08B24BC91DD168640005A06E"
                BuildableName = "ZXFoundation.framework"
-               BlueprintName = "ZXFoundation"
+               BlueprintName = "ZXFoundation-macOS"
                ReferencedContainer = "container:ZXFoundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,29 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08A1EDC81D74BA0A0061F43D"
-               BuildableName = "ZXFoundationTests.xctest"
-               BlueprintName = "ZXFoundationTests"
-               ReferencedContainer = "container:ZXFoundation.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "08A1EDBE1D74BA0A0061F43D"
-            BuildableName = "ZXFoundation.framework"
-            BlueprintName = "ZXFoundation"
-            ReferencedContainer = "container:ZXFoundation.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "08A1EDBE1D74BA0A0061F43D"
+            BlueprintIdentifier = "08B24BC91DD168640005A06E"
             BuildableName = "ZXFoundation.framework"
-            BlueprintName = "ZXFoundation"
+            BlueprintName = "ZXFoundation-macOS"
             ReferencedContainer = "container:ZXFoundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "08A1EDBE1D74BA0A0061F43D"
+            BlueprintIdentifier = "08B24BC91DD168640005A06E"
             BuildableName = "ZXFoundation.framework"
-            BlueprintName = "ZXFoundation"
+            BlueprintName = "ZXFoundation-macOS"
             ReferencedContainer = "container:ZXFoundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -29,7 +29,6 @@ extension String {
     /// String represented without any trailing whitespace.
     public var noTrailingWhitespace: String {
         
-        /// Strips whitespace from a string recursively.
         func strip( _ str: String) -> String {
             guard str.characters.last == " " else { return str }
             let str = str.substring(to: str.index(before: str.endIndex))
