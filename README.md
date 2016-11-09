@@ -29,7 +29,7 @@ Then run `pod install` to update your dependencies. Targeting versions is recomm
 In Cartfile
 
 ```
-git "git@github.com:ZXVentures/ZXFoundation"
+git "git@github.com:ZXVentures/ZXFoundation.git"
 ```
 
 Then run `carthage update`  to checkout and build the projects dependencies.
@@ -43,7 +43,7 @@ Run `swift build` and then you will find the dynamic framework in the `.build/de
 Alternately you can include the project as a git submodule.
 
 ```
-git submodule add git@github.com:ZXVentures/ZXFoundation
+git submodule add git@github.com:ZXVentures/ZXFoundation.git
 ```
 
 ##### Notes
