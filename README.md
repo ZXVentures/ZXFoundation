@@ -29,7 +29,7 @@ Then run `pod install` to update your dependencies. Targeting versions is recomm
 In Cartfile
 
 ```
-git "git@github.com:ZXVentures/ZXFoundation-ios"
+git "git@github.com:ZXVentures/ZXFoundation"
 ```
 
 Then run `carthage update`  to checkout and build the projects dependencies.
@@ -43,7 +43,7 @@ Run `swift build` and then you will find the dynamic framework in the `.build/de
 Alternately you can include the project as a git submodule.
 
 ```
-git submodule add git@github.com:ZXVentures/ZXFoundation-ios
+git submodule add git@github.com:ZXVentures/ZXFoundation
 ```
 
 ##### Notes
@@ -58,4 +58,3 @@ Please file any bugs under issues explaining the problem. Pull requests are welc
 #### License
 
 ZXFoundation is license under [The MIT License](https://opensource.org/licenses/MIT).
-

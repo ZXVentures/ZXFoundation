@@ -10,13 +10,12 @@ import Foundation
 import CoreGraphics
 
 extension CGRect {
-    
+
     /**
      Center point of the CGRect frame.
-     
+
      Determined by the min and max values of the x and y axis.
-     
-     
+
      ```
      CGPoint(x: (maxX - minX) / 2, y: (maxY - minY) / 2)
      ```
