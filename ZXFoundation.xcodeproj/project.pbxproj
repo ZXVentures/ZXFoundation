@@ -107,7 +107,37 @@
 		08B24C021DD1707A0005A06E /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B24C001DD1704E0005A06E /* Credential.swift */; };
 		08B24C031DD1707A0005A06E /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B24C001DD1704E0005A06E /* Credential.swift */; };
 		08B24C041DD1707B0005A06E /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B24C001DD1704E0005A06E /* Credential.swift */; };
+		08C2E46B1DD4EF390029E6F7 /* ZXFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B24B0A1DD15CCA0005A06E /* ZXFoundation.framework */; };
+		08C2E47A1DD4EF640029E6F7 /* ZXFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B24BBD1DD168520005A06E /* ZXFoundation.framework */; };
+		08C2E4891DD4EF7B0029E6F7 /* ZXFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B24BCA1DD168640005A06E /* ZXFoundation.framework */; };
+		08C2E4931DD4F1310029E6F7 /* CGRectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */; };
+		08C2E4941DD4F1310029E6F7 /* CGRectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */; };
+		08C2E4951DD4F1310029E6F7 /* CGRectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08C2E46C1DD4EF390029E6F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 088194CD1DD15C31001AE564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08B24B091DD15CCA0005A06E;
+			remoteInfo = "ZXFoundation-iOS";
+		};
+		08C2E47B1DD4EF640029E6F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 088194CD1DD15C31001AE564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08B24BBC1DD168520005A06E;
+			remoteInfo = "ZXFoundation-tvOS";
+		};
+		08C2E48A1DD4EF7B0029E6F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 088194CD1DD15C31001AE564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08B24BC91DD168640005A06E;
+			remoteInfo = "ZXFoundation-macOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08B24B0A1DD15CCA0005A06E /* ZXFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZXFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +176,13 @@
 		08B24BCC1DD168640005A06E /* ZXFoundation-macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZXFoundation-macOS.h"; sourceTree = "<group>"; };
 		08B24BCD1DD168640005A06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08B24C001DD1704E0005A06E /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		08C2E4661DD4EF390029E6F7 /* ZXFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08C2E46A1DD4EF390029E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C2E4751DD4EF640029E6F7 /* ZXFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08C2E4791DD4EF640029E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C2E4841DD4EF7B0029E6F7 /* ZXFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08C2E4881DD4EF7B0029E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectTests.swift; path = ZXFoundationTests/Foundation/CGRectTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +214,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08C2E4631DD4EF390029E6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C2E46B1DD4EF390029E6F7 /* ZXFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08C2E4721DD4EF640029E6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C2E47A1DD4EF640029E6F7 /* ZXFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08C2E4811DD4EF7B0029E6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C2E4891DD4EF7B0029E6F7 /* ZXFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -185,10 +246,7 @@
 			children = (
 				08B24B391DD15DD40005A06E /* Sources */,
 				08B24B5B1DD15DD40005A06E /* Tests */,
-				08B24B0B1DD15CCA0005A06E /* ZXFoundation-iOS */,
-				08B24B181DD15CED0005A06E /* ZXFoundation-watchOS */,
-				08B24BBE1DD168520005A06E /* ZXFoundation-tvOS */,
-				08B24BCB1DD168640005A06E /* ZXFoundation-macOS */,
+				08C2E48F1DD4EF930029E6F7 /* Platforms */,
 				088194D71DD15C31001AE564 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -200,6 +258,9 @@
 				08B24B171DD15CED0005A06E /* ZXFoundation.framework */,
 				08B24BBD1DD168520005A06E /* ZXFoundation.framework */,
 				08B24BCA1DD168640005A06E /* ZXFoundation.framework */,
+				08C2E4661DD4EF390029E6F7 /* ZXFoundationTests.xctest */,
+				08C2E4751DD4EF640029E6F7 /* ZXFoundationTests.xctest */,
+				08C2E4841DD4EF7B0029E6F7 /* ZXFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,6 +397,7 @@
 		08B24B5B1DD15DD40005A06E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				08C2E4901DD4F0100029E6F7 /* ZXFoundationTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -356,6 +418,60 @@
 				08B24BCD1DD168640005A06E /* Info.plist */,
 			);
 			path = "ZXFoundation-macOS";
+			sourceTree = "<group>";
+		};
+		08C2E4671DD4EF390029E6F7 /* ZXFoundation-iOS-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				08C2E46A1DD4EF390029E6F7 /* Info.plist */,
+			);
+			path = "ZXFoundation-iOS-Tests";
+			sourceTree = "<group>";
+		};
+		08C2E4761DD4EF640029E6F7 /* ZXFoundation-tvOS-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				08C2E4791DD4EF640029E6F7 /* Info.plist */,
+			);
+			path = "ZXFoundation-tvOS-Tests";
+			sourceTree = "<group>";
+		};
+		08C2E4851DD4EF7B0029E6F7 /* ZXFoundation-macOS-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				08C2E4881DD4EF7B0029E6F7 /* Info.plist */,
+			);
+			path = "ZXFoundation-macOS-Tests";
+			sourceTree = "<group>";
+		};
+		08C2E48F1DD4EF930029E6F7 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				08B24B0B1DD15CCA0005A06E /* ZXFoundation-iOS */,
+				08C2E4671DD4EF390029E6F7 /* ZXFoundation-iOS-Tests */,
+				08B24B181DD15CED0005A06E /* ZXFoundation-watchOS */,
+				08B24BBE1DD168520005A06E /* ZXFoundation-tvOS */,
+				08B24BCB1DD168640005A06E /* ZXFoundation-macOS */,
+				08C2E4761DD4EF640029E6F7 /* ZXFoundation-tvOS-Tests */,
+				08C2E4851DD4EF7B0029E6F7 /* ZXFoundation-macOS-Tests */,
+			);
+			name = Platforms;
+			sourceTree = "<group>";
+		};
+		08C2E4901DD4F0100029E6F7 /* ZXFoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				08C2E4911DD4F0B90029E6F7 /* Foundation */,
+			);
+			name = ZXFoundationTests;
+			sourceTree = "<group>";
+		};
+		08C2E4911DD4F0B90029E6F7 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */,
+			);
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,12 +584,67 @@
 			productReference = 08B24BCA1DD168640005A06E /* ZXFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		08C2E4651DD4EF390029E6F7 /* ZXFoundation-iOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08C2E4701DD4EF390029E6F7 /* Build configuration list for PBXNativeTarget "ZXFoundation-iOS-Tests" */;
+			buildPhases = (
+				08C2E4621DD4EF390029E6F7 /* Sources */,
+				08C2E4631DD4EF390029E6F7 /* Frameworks */,
+				08C2E4641DD4EF390029E6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08C2E46D1DD4EF390029E6F7 /* PBXTargetDependency */,
+			);
+			name = "ZXFoundation-iOS-Tests";
+			productName = "ZXFoundation-iOS-Tests";
+			productReference = 08C2E4661DD4EF390029E6F7 /* ZXFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		08C2E4741DD4EF640029E6F7 /* ZXFoundation-tvOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08C2E47D1DD4EF640029E6F7 /* Build configuration list for PBXNativeTarget "ZXFoundation-tvOS-Tests" */;
+			buildPhases = (
+				08C2E4711DD4EF640029E6F7 /* Sources */,
+				08C2E4721DD4EF640029E6F7 /* Frameworks */,
+				08C2E4731DD4EF640029E6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08C2E47C1DD4EF640029E6F7 /* PBXTargetDependency */,
+			);
+			name = "ZXFoundation-tvOS-Tests";
+			productName = "ZXFoundation-tvOS-Tests";
+			productReference = 08C2E4751DD4EF640029E6F7 /* ZXFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		08C2E4831DD4EF7B0029E6F7 /* ZXFoundation-macOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08C2E48C1DD4EF7B0029E6F7 /* Build configuration list for PBXNativeTarget "ZXFoundation-macOS-Tests" */;
+			buildPhases = (
+				08C2E4801DD4EF7B0029E6F7 /* Sources */,
+				08C2E4811DD4EF7B0029E6F7 /* Frameworks */,
+				08C2E4821DD4EF7B0029E6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08C2E48B1DD4EF7B0029E6F7 /* PBXTargetDependency */,
+			);
+			name = "ZXFoundation-macOS-Tests";
+			productName = "ZXFoundation-macOS-Tests";
+			productReference = 08C2E4841DD4EF7B0029E6F7 /* ZXFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		088194CD1DD15C31001AE564 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "ZX VENTURES LLC";
 				TargetAttributes = {
@@ -493,6 +664,21 @@
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Manual;
 					};
+					08C2E4651DD4EF390029E6F7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FJ7Z6LB83U;
+						ProvisioningStyle = Automatic;
+					};
+					08C2E4741DD4EF640029E6F7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FJ7Z6LB83U;
+						ProvisioningStyle = Automatic;
+					};
+					08C2E4831DD4EF7B0029E6F7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FJ7Z6LB83U;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 088194D01DD15C31001AE564 /* Build configuration list for PBXProject "ZXFoundation" */;
@@ -511,6 +697,9 @@
 				08B24B161DD15CED0005A06E /* ZXFoundation-watchOS */,
 				08B24BBC1DD168520005A06E /* ZXFoundation-tvOS */,
 				08B24BC91DD168640005A06E /* ZXFoundation-macOS */,
+				08C2E4651DD4EF390029E6F7 /* ZXFoundation-iOS-Tests */,
+				08C2E4741DD4EF640029E6F7 /* ZXFoundation-tvOS-Tests */,
+				08C2E4831DD4EF7B0029E6F7 /* ZXFoundation-macOS-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -538,6 +727,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		08B24BC81DD168640005A06E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08C2E4641DD4EF390029E6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08C2E4731DD4EF640029E6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08C2E4821DD4EF7B0029E6F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -671,7 +881,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08C2E4621DD4EF390029E6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C2E4931DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08C2E4711DD4EF640029E6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C2E4941DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08C2E4801DD4EF7B0029E6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C2E4951DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08C2E46D1DD4EF390029E6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08B24B091DD15CCA0005A06E /* ZXFoundation-iOS */;
+			targetProxy = 08C2E46C1DD4EF390029E6F7 /* PBXContainerItemProxy */;
+		};
+		08C2E47C1DD4EF640029E6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08B24BBC1DD168520005A06E /* ZXFoundation-tvOS */;
+			targetProxy = 08C2E47B1DD4EF640029E6F7 /* PBXContainerItemProxy */;
+		};
+		08C2E48B1DD4EF7B0029E6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08B24BC91DD168640005A06E /* ZXFoundation-macOS */;
+			targetProxy = 08C2E48A1DD4EF7B0029E6F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		088194DC1DD15C31001AE564 /* Debug */ = {
@@ -788,7 +1040,7 @@
 				PRODUCT_NAME = ZXFoundation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -811,7 +1063,7 @@
 				PRODUCT_NAME = ZXFoundation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -834,7 +1086,7 @@
 				PRODUCT_NAME = ZXFoundation;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -857,7 +1109,7 @@
 				PRODUCT_NAME = ZXFoundation;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -880,7 +1132,7 @@
 				PRODUCT_NAME = ZXFoundation;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -902,7 +1154,7 @@
 				PRODUCT_NAME = ZXFoundation;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -927,7 +1179,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-macOS";
 				PRODUCT_NAME = ZXFoundation;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -949,6 +1201,92 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-macOS";
 				PRODUCT_NAME = ZXFoundation;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0.1;
+			};
+			name = Release;
+		};
+		08C2E46E1DD4EF390029E6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				INFOPLIST_FILE = "ZXFoundation-iOS-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-iOS-Tests";
+				PRODUCT_NAME = ZXFoundationTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		08C2E46F1DD4EF390029E6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				INFOPLIST_FILE = "ZXFoundation-iOS-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-iOS-Tests";
+				PRODUCT_NAME = ZXFoundationTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		08C2E47E1DD4EF640029E6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				INFOPLIST_FILE = "ZXFoundation-tvOS-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-tvOS-Tests";
+				PRODUCT_NAME = ZXFoundationTests;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		08C2E47F1DD4EF640029E6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				INFOPLIST_FILE = "ZXFoundation-tvOS-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-tvOS-Tests";
+				PRODUCT_NAME = ZXFoundationTests;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		08C2E48D1DD4EF7B0029E6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				INFOPLIST_FILE = "ZXFoundation-macOS-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-macOS-Tests";
+				PRODUCT_NAME = ZXFoundationTests;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		08C2E48E1DD4EF7B0029E6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				INFOPLIST_FILE = "ZXFoundation-macOS-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zx-ventures.frameworks.ZXFoundation-macOS-Tests";
+				PRODUCT_NAME = ZXFoundationTests;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1000,6 +1338,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		08C2E4701DD4EF390029E6F7 /* Build configuration list for PBXNativeTarget "ZXFoundation-iOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08C2E46E1DD4EF390029E6F7 /* Debug */,
+				08C2E46F1DD4EF390029E6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		08C2E47D1DD4EF640029E6F7 /* Build configuration list for PBXNativeTarget "ZXFoundation-tvOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08C2E47E1DD4EF640029E6F7 /* Debug */,
+				08C2E47F1DD4EF640029E6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		08C2E48C1DD4EF7B0029E6F7 /* Build configuration list for PBXNativeTarget "ZXFoundation-macOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08C2E48D1DD4EF7B0029E6F7 /* Debug */,
+				08C2E48E1DD4EF7B0029E6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

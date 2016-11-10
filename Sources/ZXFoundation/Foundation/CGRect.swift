@@ -12,15 +12,21 @@ import CoreGraphics
 extension CGRect {
 
     /**
-     Center point of the CGRect frame.
-
-     Determined by the min and max values of the x and y axis.
-
-     ```
-     CGPoint(x: (maxX - minX) / 2, y: (maxY - minY) / 2)
-     ```
+     Center point of the CGRect.
+     
+     `CGRect(0, 0, 100, 100) -> CGPoint(50, 50)`
+     
+     `CGRect(-50, 0, 100, 100) -> CGPoint(0, 50)`
+     
+     `CGRect(100, 0, 100, 100) -> CGPoint(150, 50)`
      */
     public var center: CGPoint {
-        return CGPoint(x: (maxX - minX) / 2, y: (maxY - minY) / 2)
+        
+        let boundX = origin.x >= 0 ? width : width + origin.x
+        let boundY = origin.y >= 0 ? height : height + origin.y
+        let x = (origin.x == 0 ? boundX - origin.x : boundX + origin.x) / 2
+        let y = (origin.y == 0 ? boundY - origin.y : boundY + origin.y) / 2
+        
+        return CGPoint(x: x, y: y)
     }
 }
