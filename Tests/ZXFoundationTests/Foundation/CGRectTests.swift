@@ -3,7 +3,7 @@
 //  ZXFoundation
 //
 //  Created by Wyatt McBain on 11/10/16.
-//  Copyright © 2016 ZX VENTURES LLC. All rights reserved.
+//  Copyright © 2016 ZX Ventures. All rights reserved.
 //
 
 import XCTest

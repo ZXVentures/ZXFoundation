@@ -113,6 +113,9 @@
 		08C2E4931DD4F1310029E6F7 /* CGRectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */; };
 		08C2E4941DD4F1310029E6F7 /* CGRectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */; };
 		08C2E4951DD4F1310029E6F7 /* CGRectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */; };
+		08C2E4991DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */; };
+		08C2E49A1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */; };
+		08C2E49B1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +186,7 @@
 		08C2E4841DD4EF7B0029E6F7 /* ZXFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C2E4881DD4EF7B0029E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectTests.swift; path = ZXFoundationTests/Foundation/CGRectTests.swift; sourceTree = "<group>"; };
+		08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateAndDateFormatterTests.swift; path = ZXFoundationTests/Foundation/DateAndDateFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */,
+				08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -646,7 +651,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "ZX VENTURES LLC";
+				ORGANIZATIONNAME = "ZX Ventures";
 				TargetAttributes = {
 					08B24B091DD15CCA0005A06E = {
 						CreatedOnToolsVersion = 8.1;
@@ -666,8 +671,7 @@
 					};
 					08C2E4651DD4EF390029E6F7 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = FJ7Z6LB83U;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					08C2E4741DD4EF640029E6F7 = {
 						CreatedOnToolsVersion = 8.1;
@@ -885,6 +889,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C2E4991DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */,
 				08C2E4931DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -893,6 +898,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C2E49A1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */,
 				08C2E4941DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -901,6 +907,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C2E49B1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */,
 				08C2E4951DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1209,7 +1216,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ZXFoundation-iOS-Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1224,7 +1231,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = FJ7Z6LB83U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ZXFoundation-iOS-Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
