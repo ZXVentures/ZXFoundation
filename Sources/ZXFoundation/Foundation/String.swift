@@ -95,6 +95,8 @@ extension String {
      */
     public static func random(length: Int8) -> String {
         
+        guard length > 0 else { return "" }
+        
         let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let lettersLength = UInt32(letters.length)
         

@@ -116,6 +116,9 @@
 		08C2E4991DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */; };
 		08C2E49A1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */; };
 		08C2E49B1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */; };
+		08C2E49D1DD51FEA0029E6F7 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E49C1DD51FEA0029E6F7 /* StringTests.swift */; };
+		08C2E49E1DD51FEA0029E6F7 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E49C1DD51FEA0029E6F7 /* StringTests.swift */; };
+		08C2E49F1DD51FEA0029E6F7 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2E49C1DD51FEA0029E6F7 /* StringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +190,7 @@
 		08C2E4881DD4EF7B0029E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectTests.swift; path = ZXFoundationTests/Foundation/CGRectTests.swift; sourceTree = "<group>"; };
 		08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateAndDateFormatterTests.swift; path = ZXFoundationTests/Foundation/DateAndDateFormatterTests.swift; sourceTree = "<group>"; };
+		08C2E49C1DD51FEA0029E6F7 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringTests.swift; path = ZXFoundationTests/Foundation/StringTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,6 +479,7 @@
 			children = (
 				08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */,
 				08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */,
+				08C2E49C1DD51FEA0029E6F7 /* StringTests.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -890,6 +895,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C2E4991DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */,
+				08C2E49D1DD51FEA0029E6F7 /* StringTests.swift in Sources */,
 				08C2E4931DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -899,6 +905,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C2E49A1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */,
+				08C2E49E1DD51FEA0029E6F7 /* StringTests.swift in Sources */,
 				08C2E4941DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,6 +915,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C2E49B1DD5043E0029E6F7 /* DateAndDateFormatterTests.swift in Sources */,
+				08C2E49F1DD51FEA0029E6F7 /* StringTests.swift in Sources */,
 				08C2E4951DD4F1310029E6F7 /* CGRectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
