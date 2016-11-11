@@ -191,6 +191,7 @@
 		08C2E4921DD4F1310029E6F7 /* CGRectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectTests.swift; path = ZXFoundationTests/Foundation/CGRectTests.swift; sourceTree = "<group>"; };
 		08C2E4981DD5043E0029E6F7 /* DateAndDateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateAndDateFormatterTests.swift; path = ZXFoundationTests/Foundation/DateAndDateFormatterTests.swift; sourceTree = "<group>"; };
 		08C2E49C1DD51FEA0029E6F7 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringTests.swift; path = ZXFoundationTests/Foundation/StringTests.swift; sourceTree = "<group>"; };
+		08C2E4A21DD6177E0029E6F7 /* Networking.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Networking.playground; path = Docs/Playgrounds/Networking.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +253,7 @@
 		088194CC1DD15C31001AE564 = {
 			isa = PBXGroup;
 			children = (
+				08C2E4A01DD617470029E6F7 /* Docs */,
 				08B24B391DD15DD40005A06E /* Sources */,
 				08B24B5B1DD15DD40005A06E /* Tests */,
 				08C2E48F1DD4EF930029E6F7 /* Platforms */,
@@ -482,6 +484,22 @@
 				08C2E49C1DD51FEA0029E6F7 /* StringTests.swift */,
 			);
 			name = Foundation;
+			sourceTree = "<group>";
+		};
+		08C2E4A01DD617470029E6F7 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				08C2E4A11DD617640029E6F7 /* Playgrounds */,
+			);
+			name = Docs;
+			sourceTree = "<group>";
+		};
+		08C2E4A11DD617640029E6F7 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				08C2E4A21DD6177E0029E6F7 /* Networking.playground */,
+			);
+			name = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

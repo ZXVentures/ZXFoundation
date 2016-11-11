@@ -19,7 +19,8 @@ import Foundation
  
  **Example:**
  
- For instance let's say we have a model for photos named `Photo`:
+ For instance let's say we have a model for photos named `Photo`, which has an
+ initializer to transform a network response into this type:
  ```
  public struct Photo {
  
@@ -29,6 +30,26 @@ import Foundation
     var url: URL
     var thumbnailUrl: URL
  }
+ 
+ extension Photo {
+ 
+    init(with json: [String: Any]?) throws {
+ 
+        guard let id         = json?["id"] as? Int,
+            let albumId      = json?["albumId"] as? Int,
+            let title        = json?["title"] as? String,
+            let url          = URL(string: json?["url"] as? String ?? ""),
+            let thumbnailUrl = URL(string: json?["thumbnailUrl"] as? String ?? "")
+            else { throw NetworkError.parse }
+ 
+            self.id           = Int16(id)
+            self.albumId      = Int16(albumId)
+            self.title        = title
+            self.url          = url
+            self.thumbnailUrl = thumbnailUrl
+        }
+    }
+ }
  ```
  
  We would then model our `Endpoint`(s) for photos on the `Photo` struct
@@ -37,22 +58,16 @@ import Foundation
  ```
  extension Photo {
  
-    static func all(with baseUrl: URL) throws -> Endpoint<[Photo]> {
+    static func single(by id: Int16, with baseUrl: URL) throws -> Endpoint<Photo> {
  
-        guard let url = URL(string: "photos", relativeTo: baseUrl) else { throw NetworkError.url }
+        guard let url = URL(string: "photos/\(id)", relativeTo: baseUrl) else {
+            throw NetworkError.url
+        }
  
-        return Endpoint(url: url, parse: { json throws in
+        return Endpoint(url: url, parse: { json in
  
-            guard let jsonArray = json as? [[String: Any]] else { throw NetworkError.parse }
- 
-            do {
- 
-                var photos = [Photo]()
-                for json in jsonArray {
-                    try photos.append(Photo(with: json))
-                }
-                return photos
-            }
+            do { return .success(try Photo(with: json as? [String: Any])) }
+            catch let error { return .failure(error) }
         })
     }
  }
